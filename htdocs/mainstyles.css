@@ -1,0 +1,94 @@
+@font-face {
+	font-weight: 300;
+  	font-family: 'Roboto';
+  	src: url('Roboto-Thin.ttf'); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.indexheader {
+     width: 100%;
+     height: 50pt;
+     background-image: url("Pictures/header.jpg");
+     background-size: cover;
+}
+
+.indexheader::after {
+    content: "";
+	display: table;
+    clear: both;
+}
+
+.innerheader {
+    width: 20%;
+    height: 15pt;
+    float: left;
+    margin-left: 20pt;
+    margin-top: 10pt;
+}
+		
+		
+.buttons_cont {
+	width: 20%;
+	height: 15pt;
+	float:right;
+	padding:10pt;
+}
+
+.buttons {
+    width: 20%;
+    height: 15pt;
+    float: right;
+}
+		
+.main_body{
+	background-size: cover
+}
+
+.main_content {
+    max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+   	margin-top: 20pt; 
+   	clear: both;
+	text-align: justify
+}
+		
+.photos {
+	display: flex; 
+   	flex-wrap: wrap; 
+   	gap: 20px;
+}
+		
+.description{
+	margin-top:20pt;
+}
+		
+.btn {
+	background-color: #4CAF50; /* Green */
+	color: white;
+	padding: 15px 32px;
+	font-size: 16px;
+	margin: 14px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+.tiles-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+} 
+  
+.tile { 
+    flex: 1 0 300px; 
+    padding: 20px; 
+    border-radius: 10px;  
+	border-style: solid;
+} 
+main { 
+    max-width: 800px; 
+    margin: 20px auto; 
+} 

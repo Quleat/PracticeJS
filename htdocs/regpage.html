@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<script src="reg.js"></script>
+<html lang="en">
+	<body>
+    <div style="margin:1pt auto">
+        <h2>Login</h2>
+        <form action="#" method="post" onsubmit="validateReg(event)">
+            <div class="def">
+                <a>Your name*: </a><input type="text" id="name">
+            </div>
+            <br>
+            <div class="def">
+                <a>Password*: </a><input type="password" id="pswd">
+            </div>
+            <br>
+            <div class="def">
+                <a>Repeat your password*:</a><input type="password" id="confpswd">
+            </div>
+            <br>
+            <div class="def">
+                <a>Email*:</a><input type="text" id="email">
+            </div>
+            <br>
+            <a class="def"> * - Field's that are required to fill</a>
+            <div class="def">
+                <input type="submit" value="Send">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
