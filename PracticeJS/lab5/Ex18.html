@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>simple animation</title>
+    <script language="JavaScript">
+        function moveTxt() {
+            var anil = document.getElementById("anil");
+            var top = parseInt(anil.style.top, 10);
+
+            if (top < 500) {
+                anil.style.top = (top + 1) + "px";
+                setTimeout(moveTxt, 1);
+            }
+        }
+    </script>
+</head>
+<body onLoad="moveTxt()">
+    <div id="anil" style="position:absolute; left:10px; top:10px;">
+        Текст, шагом марш!
+    </div>
+</body>
+</html>

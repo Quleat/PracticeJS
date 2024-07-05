@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function download(){
+            let result = confirm("Для загрузки документа требуется программа"+
+                " Acrobat. Продолжить загрузку?");
+            if(result){
+                window.location.href="Donwload.pdf";
+            }
+        }
+
+        function changeColor(){
+            document.body.style.backgroundColor="red";
+        }
+        function removeColor(){
+            document.body.style.backgroundColor="white";
+        }
+        </script>
+    </head>
+    <style>
+        .secLink{
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <a href=" " onclick="download()">Download a pdf</a>
+        <br>
+        <a href=" " class="secLink" onmouseover="changeColor()"
+        onmouseout="reomveColor()">Change color</a>
+    </body>
+</html>

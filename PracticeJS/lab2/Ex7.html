@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>array</title>
+<script language="JavaScript">
+    function subjects(){
+        subjects =new Array("Математика",
+                            "Физика",
+                            "Химия",
+                            "Информатика",
+                            "Литература",
+                            "История",
+                            "География",
+                            "Английский язык",
+                            "Иностранный язык",
+                            "Биология",
+                            "Физическая культура",
+                            "Музыка",
+                            "Искусство",
+                            "Технология",
+                            "Обществознание");
+        exact_science=new Array();
+        exact_science=subjects.slice(0, 3);
+        liberal_arts=new Array();
+        liberal_arts=subjects.slice(4, 15);
+        document.write("<p>"+exact_science.join(", ")+"</p>");
+        document.write("<p>"+liberal_arts.join(", ") + "</p>");
+    }
+    </script>
+</head>
+<body>
+    <script>
+        subjects();
+    </script>
+</body>
+</html>

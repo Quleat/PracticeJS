@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The form to fill</title>
+    <style>
+        .def {
+            margin: 10pt;
+            clear: left;
+            float: left;
+        }
+    </style>
+    <script>
+        function validate(event) {
+            event.preventDefault();
+            let name = document.getElementById("name");
+            let pswd = document.getElementById("password");
+            let confpswd = document.getElementById("confpswd");
+            let email = document.getElementById("email");
+            let message = document.getElementById("message");
+
+            if (name.value.trim() == "") {
+                alert("The name field is empty!");
+                return false;
+            }
+            if (pswd.value.length <= 4) {
+                alert("The password should be longer than 4 characters!");
+                return false;
+            }
+            if (pswd.value != confpswd.value) {
+                alert("The passwords are different!");
+                return false;
+            }
+            if (!email.value.includes("@")) {
+                alert("The email should be valid!");
+                return false;
+            }
+            if (message.value.trim().length <= 10) {
+                alert("The message should be longer than 10 symbols");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form" action="/submit_form" method="post" onsubmit="validate(event)">
+        <div class="def">
+            <a>Ваше имя*: </a><input type="text" id="name">
+        </div>
+        <br>
+        <div class="def">
+            <a>Пароль*: </a><input type="password" id="password">
+        </div>
+        <br>
+        <div class="def">
+            <a>Подтверждение пароля*:</a><input type="password" id="confpswd">
+        </div>
+        <br>
+        <div class="def">
+            <a>Электронный адрес*:</a><input type="text" id="email">
+        </div>
+        <br>
+        <div class="def">
+            <a>Тема сообщения:</a><input type="text" id="topic">
+        </div>
+        <br>
+        <div class="def">
+            <a>Сообщение:</a><textarea id="message" rows="4" cols="50"></textarea>
+        </div>
+        <a class="def"> * - Поля обязательные к заполнению</a>
+        <div class="def">
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+        </div>
+    </form>
+</body>
+</html>

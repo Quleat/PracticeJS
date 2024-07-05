@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    * {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .front {
+        z-index: 3;
+    }
+    .middle {
+        z-index: 2;
+    }
+    .back {
+        z-index: 1;
+    }
+</style>
+<script>
+    function move() {
+        let image = document.getElementById("image");
+        let left = parseInt(image.style.left, 10);
+
+        if (left < 1300) {
+            image.style.left = (left + 1) + "px";
+            setTimeout(move, 10);
+        }
+    }
+    window.onload = move;
+</script>
+</head>
+<body>
+    <div class="front">
+        <img src="front.png" width="100px" height="100px">
+    </div>
+    <div class="middle" id="image" style="left: 0px;">
+        <img src="jpstreet3.jpg" width="200px" height="272px">
+    </div>
+    <div class="back">
+        <img src="back.png" width="400px" height="400px">
+    </div>
+</body>
+</html>

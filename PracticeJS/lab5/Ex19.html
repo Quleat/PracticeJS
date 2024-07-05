@@ -1,0 +1,23 @@
+<head>
+<title>anima1</title>
+<script language="JavaScript">
+function moveTxt()
+{
+    let anim = document.getElementById("anim");
+    let top = parseInt(anim.style.top);
+    let left = parseInt(anim.style.left);
+    if (top < 500)
+    {
+        anim.style.top = top + 2;
+        anim.style.left = left - 2;
+        setTimeout(moveTxt, 50);
+    }
+}
+</script>
+</head>
+<body onLoad="moveTxt()">
+<div id="anim" style="position:absolute; left:1300px; top:10px">
+Текст, шагом марш!
+</div>
+</body>
+</html>
